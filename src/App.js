@@ -1,10 +1,18 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
-import {Home} from './pages/Home';
+import {StyleSheet, SafeAreaView} from 'react-native';
+import {Routes} from './routes';
 const App = () => {
-  return <Home />;
+  return (
+    <SafeAreaView style={styles.safeAreaStyle}>
+      <Routes />
+    </SafeAreaView>
+  );
 };
-
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  safeAreaStyle: {
+    flex: 1,
+    backgroundColor: '#f1f1f1',
+  },
+});
 
 export default App;

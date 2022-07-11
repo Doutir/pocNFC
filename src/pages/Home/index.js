@@ -1,41 +1,40 @@
 import React from 'react';
-import {Alert, View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {Alert, View, StyleSheet} from 'react-native';
 import NfcManager, {NfcTech} from 'react-native-nfc-manager';
+import {Button} from '../../components/Button';
 
 // Pre-step, call this before any NFC operations
 NfcManager.start();
 
-function Home() {
+function Home({navigation}) {
   async function readNdef() {
-    console.log('iniciandoLeitura');
-    try {
-      // register for the NFC tag with NDEF in it
-      await NfcManager.requestTechnology(NfcTech.Ndef);
-      // the resolved tag object will contain `ndefMessage` property
-      const tag = await NfcManager.getTag();
-      // let text = String.fromCharCode(...tag.ndefMessage[0].payload);
-      let text = String.fromCharCode(...tag.ndefMessage[0].payload).substring(
-        3,
-      );
-
-      console.log({text});
-
-      console.log('Tag found', JSON.stringify(tag, null, 1));
-    } catch (ex) {
-      console.warn('Oops!', ex);
-    } finally {
-      // stop the nfc scanning
-      NfcManager.cancelTechnologyRequest();
-    }
+    navigation.navigate('Profile', {
+      userId: '5403dd5e-61dd-47ff-ae84-cc13bad5fd9a',
+    });
+    console.log({navigation});
+    // try {
+    //   // register for the NFC tag with NDEF in it
+    //   await NfcManager.requestTechnology(NfcTech.Ndef);
+    //   // the resolved tag object will contain `ndefMessage` property
+    //   const tag = await NfcManager.getTag();
+    //   // let text = String.fromCharCode(...tag.ndefMessage[0].payload);
+    //   let text = String.fromCharCode(...tag.ndefMessage[0].payload).substring(
+    //     3,
+    //   );
+    //   console.log({text});
+    //   console.log('Tag found', JSON.stringify(tag, null, 1));
+    // } catch (ex) {
+    //   Alert.alert('Oops!', 'houve um erro ao ler a tag, tente novamente');
+    //   console.warn('Oops!', ex);
+    // } finally {
+    //   // stop the nfc scanning
+    //   NfcManager.cancelTechnologyRequest();
+    // }
   }
 
   return (
     <View style={styles.wrapper}>
-      <TouchableOpacity
-        style={{backgroundColor: 'red', width: 100, height: 100}}
-        onPress={readNdef}>
-        <Text>Scan a Tag</Text>
-      </TouchableOpacity>
+      <Button onPress={readNdef}>Ler TAG</Button>
     </View>
   );
 }

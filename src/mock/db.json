@@ -1,0 +1,69 @@
+{
+ 
+  "users": [
+    {
+      "id":"bff1b82e-bf51-4e53-8434-9f202ce086b7",
+      "fullName": "Renan Samuel Alexandre Santos",
+      "avatarURI":
+        "https://static.wikia.nocookie.net/doctorwho/images/3/34/D%C3%A9cimo_Primeiro_Doctor.png/revision/latest?cb=20151227132347&path-prefix=pt",
+      "birthDate": "08/07/1959",
+      "cityLive": "Belo Horizonte",
+      "emergencyContact": {
+        "name": "Claudio",
+        "telephoneNumber": "(31) 98247-4573"
+      },
+      "bloodType":"AB-",
+      "allergies": [
+        "penicilina",
+        "amendoim",
+        "paracetamol",
+        "benzetônio",
+        "açúcar",
+        "camarão"
+      ]
+    },
+
+    {
+      "id":"5403dd5e-61dd-47ff-ae84-cc13bad5fd9a",
+      "fullName": "Isabella Mirella Sebastiana Almeida",
+      "avatarURI":
+        "https://i2-prod.gloucestershirelive.co.uk/news/cheltenham-news/article204739.ece/ALTERNATES/s615/Jodie2.jpg",
+      "birthDate": "19/06/1961",
+      "cityLive": "São José do Rio Preto",
+      "emergencyContact": {
+        "name": "Jorge",
+        "telephoneNumber": "(17) 99441-8055"
+      },
+      "bloodType":"A+",
+      "allergies": [
+        "penicilina",
+        "amendoim",
+        "paracetamol",
+        "benzetônio",
+        "açúcar",
+        "camarão"
+      ]
+    },
+    {
+      "id":"c9bc06c1-841e-4fd0-81ce-b3de9c90cd79",
+      "fullName": "Daniel Carino Barthon",
+      "avatarURI":
+        "https://static.wikia.nocookie.net/doctorwho/images/0/00/D%C3%A9cimo_Segundo_Doctor.png/revision/latest?cb=20151227132344&path-prefix=pt",
+      "birthDate": "17/10/2001",
+      "cityLive": "Macapá",
+      "emergencyContact": {
+        "name": "Gabi",
+        "telephoneNumber": "(96) 99177-2954"
+      },
+      "bloodType":"B+",
+      "allergies": [
+        "penicilina",
+        "amendoim",
+        "paracetamol",
+        "benzetônio",
+        "açúcar",
+        "camarão"
+      ]
+    }
+  ]
+}
